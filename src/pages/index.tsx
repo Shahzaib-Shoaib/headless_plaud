@@ -1,5 +1,6 @@
 import Accordion from "@/components/accordion";
 import HeroSection from "@/components/hero";
+import TranscriptionSection from "@/components/transcription";
 import VideoComponent from "@/components/video";
 import Image from "next/image";
 
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <VideoComponent />
       <Accordion />
+      <TranscriptionSection />
 
       {/* <div>
         <video width="500" autoPlay loop control>
