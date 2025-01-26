@@ -32,7 +32,7 @@ export default function TranscriptionSection() {
                     : "text-gray-700"
                 }`}
               >
-                {content[speaker].text}
+                {content[speaker as keyof typeof content].text}
               </button>
             </li>
           ))}
@@ -42,15 +42,15 @@ export default function TranscriptionSection() {
       {/* Right Column: Content Section */}
       <div className="relative flex justify-center items-center h-72 w-full">
         <div className="absolute">
-          {content[active].media.type === "image" ? (
+          {content[active as keyof typeof content].media.type === "image" ? (
             <img
-              src={content[active].media.src}
+              src={content[active as keyof typeof content].media.src}
               alt="Media Content"
               className="h-full w-auto max-w-md object-contain rounded-xl"
             />
           ) : (
             <video
-              src={content[active].media.src}
+              src={content[active as keyof typeof content].media.src}
               autoPlay
               className="h-full w-auto max-w-md object-contain rounded-xl"
             />
