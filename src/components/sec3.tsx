@@ -32,7 +32,7 @@ export default function Sec3() {
   }
   return (
     <div>
-      <div className=" lg:rounded-[10rem] bg-black text-white my-14 ">
+      <div className=" lg:rounded-[10rem] bg-black text-white my-14   rounded-t-[5000px] rounded-b-full ">
         <h1 className="flex text-center items-center justify-center text-white lg:text-8xl lg:mx-52 lg:py-28 text-5xl py-24  lg:px-0 px-10">
           Nothing that matters is missed
         </h1>
@@ -54,12 +54,33 @@ export default function Sec3() {
             The best ideas can come when you're least expecting them. NotePin is
             always with you to ensure none of them slip away.
           </p>
+
+          <div className="w-[340px] h-[340px] overflow-hidden rounded-[3.5rem]">
+            <video
+              src="/videos/plus_one.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          </div>
           <p className="text-4xl flex items-center justify-center text-center mt-10">
             Press, record, recall
           </p>
           <p className="font-light text-[22px] leading-6 my-5 text-center">
             Simply press and capture every important detail, effortlessly.
           </p>
+          <div className="w-[340px] h-[340px] overflow-hidden rounded-[3.5rem]">
+            <video
+              src="/videos/plus_two.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         <div className="lg:block hidden">
