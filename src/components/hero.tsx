@@ -11,7 +11,7 @@ export default function HeroSection() {
     <>
       <div className="bg-cover bg-center h-[90vh] w-[100vw]  relative md:bg-[url('https://www.plaud.ai/cdn/shop/files/Banner_3840x2160_030e8ade-e64a-4ef0-82bc-1d4621200cf3_2560x.jpg?v=1724760758')] bg-[url('https://www.plaud.ai/cdn/shop/files/750x1500_375x@2x.jpg?v=1724760757')]">
         {/* Main container divided into two sections */}
-        <div className="grid  md:grid-cols-[70%_30%] h-full w-full flex flex-col md:flex-row">
+        <div className="md:grid  md:grid-cols-[70%_30%] h-full w-full flex flex-col md:flex-row">
           {/* Right side for mobile: YouTube thumbnail */}
           <div className="flex items-center justify-center lg:mt-40 md:order-2 md:mt-0">
             <div
@@ -61,7 +61,7 @@ export default function HeroSection() {
       {/* Video Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
-          <div className="relative bg-white rounded-lg w-[90%] max-w-4xl">
+          <div className="relative bg-white rounded-lg w-[90%] max-w-4xl lg:block hidden">
             {/* Close Button */}
             <button
               className="absolute top-4 right-4 text-gray-600 hover:text-black"
@@ -73,6 +73,26 @@ export default function HeroSection() {
             <iframe
               width="100%"
               height="500"
+              src="https://www.youtube.com/embed/LVm3YG7hdQQ?si=46qc9_-8b5-GlNc0"
+              title="YouTube Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          <div className="relative bg-white rounded-lg w-[90%] max-w-4xl block lg:hidden">
+            {/* Close Button */}
+            <button
+              className="absolute top-4 right-4 text-gray-600 hover:text-black"
+              onClick={handleModalToggle}
+            >
+              ✕
+            </button>
+            {/* YouTube Video */}
+            <iframe
+              width="100%"
+              height="200"
               src="https://www.youtube.com/embed/LVm3YG7hdQQ?si=46qc9_-8b5-GlNc0"
               title="YouTube Video"
               frameBorder="0"

@@ -32,33 +32,30 @@ export default function Sec3() {
   }
   return (
     <div>
-      <div className="rounded-3xl bg-black text-white my-14">
-        <h1 className="flex text-center items-center justify-center text-white text-9xl mx-52 py-52">
+      <div className="rounded-[10rem] bg-black text-white my-14">
+        <h1 className="flex text-center items-center justify-center text-white lg:text-8xl lg:mx-52 lg:py-28">
           Nothing that matters is missed
         </h1>
 
-        <div className="">
-          <section className="bg-black text-white min-h-screen relative px-4 py-12 md:py-20">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 ">
+        <div className="lg:block hidden">
+          <section className="bg-black text-white min-h-screen relative px-20 py-12 md:py-20">
+            <div className="max-w-7xl mx-auto grid grid-cols-3  ">
               {/* Left Column */}
               <div className="mt-[11rem]">
                 <div className="grid-cols-[70%_30%] flex">
                   <div className="">
-                    <h2 className="text-4xl md:text-5xl font-light leading-tight mb-5">
+                    <h2 className=" font-light  text-[40px] leading-10 mb-4">
                       Always ready to capture everything
                     </h2>
 
-                    <p className="text-lg md:text-2xl font-light leading-relaxed max-w-md mx-auto lg:mx-0">
+                    <p className=" font-light text-[22px] leading-5">
                       The best ideas can come when you&apos;re least expecting
                       them. NotePin is always with you to ensure none of them
                       slip away.
                     </p>
                   </div>
 
-                  <div
-                    className="hidden lg:block "
-                    onClick={handleModalToggle1}
-                  >
+                  <div className="" onClick={handleModalToggle1}>
                     <div className="w-12 h-12 border border-white hover:border-[#ff4438] rounded-full flex items-center justify-center">
                       <PlusIcon className="w-6 h-6 text-white hover:text-[#ff4438]" />
                     </div>
@@ -72,7 +69,7 @@ export default function Sec3() {
                   <img
                     src="/images/sec3.png"
                     alt=""
-                    className=" object-contain w-[70%]"
+                    className=" object-contain w-[60%]"
                   />
                 </div>
               </div>
@@ -80,16 +77,16 @@ export default function Sec3() {
               {/* Right Column */}
               <div className="mt-[11rem]">
                 <div className=" grid-cols-[30%_70%] flex">
-                  <div className="hidden lg:block mr-5" onClick={handleModalToggle2}>
+                  <div className=" mr-5" onClick={handleModalToggle2}>
                     <div className="w-12 h-12 border border-white hover:border-[#ff4438] rounded-full flex items-center justify-center">
                       <PlusIcon className="w-6 h-6 text-white hover:text-[#ff4438]" />
                     </div>
                   </div>
                   <div className="">
-                    <h2 className="text-4xl md:text-5xl font-light leading-tight mb-5">
+                    <h2 className="font-light text-[40px] leading-10 mb-4">
                       Press, record, recall
                     </h2>
-                    <p className="text-lg md:text-2xl font-light leading-relaxed max-w-md mx-auto lg:mx-0">
+                    <p className=" font-light text-[22px] leading-5 ">
                       Simply press and capture every important detail,
                       effortlessly.
                     </p>
@@ -100,7 +97,7 @@ export default function Sec3() {
           </section>
         </div>
 
-        <h1 className="flex text-center items-center justify-center text-white text-9xl  py-52">
+        <h1 className="flex text-center items-center justify-center text-white lg:text-8xl lg:py-28">
           Always by your side{" "}
         </h1>
       </div>
