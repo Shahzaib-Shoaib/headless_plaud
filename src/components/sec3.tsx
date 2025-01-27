@@ -55,14 +55,14 @@ export default function Sec3() {
             always with you to ensure none of them slip away.
           </p>
 
-          <div className="w-[340px] h-[340px] overflow-hidden rounded-[3.5rem]">
+          <div className="w-[340px] h-[340px] overflow-hidden rounded-[3.5rem] ">
             <video
               src="/videos/plus_one.mp4"
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover "
             />
           </div>
           <p className="text-4xl flex items-center justify-center text-center mt-10">
