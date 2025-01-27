@@ -23,7 +23,7 @@ export default function TranscriptionSection() {
         Beyond just accurate transcriptions{" "}
       </h1>
 
-      <p className="flex text-center justify-center items-center md:text-lg md:mx-60 md:my-10 text-2xl m-8 ">
+      <p className="flex text-center justify-center items-center md:text-xl md:mx-60 md:my-10 text-2xl m-8 ">
         Recordings are enhanced by combining multiple advanced transcription
         features to ensure accuracy and context you can trust, supporting
         multiple speakers in 112 languages.
