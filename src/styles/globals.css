@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* globals.css */
+@font-face {
+  font-family: "Century Gothic";
+  src: url("/font/gothic.woff2") format("woff");
+  font-weight: 400; /* Normal */
+  font-style: normal;
+}
