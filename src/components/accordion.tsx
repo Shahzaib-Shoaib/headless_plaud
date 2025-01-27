@@ -60,20 +60,74 @@ export default function Accordion() {
 
   return (
     <>
-      <h1 className="flex text-center justify-center items-center text-6xl mb-5">
-        AI notetaker for all professionals
-      </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-4 p-4 mx-4 ">
-        {/* Left side - Image */}
-        <div className="p-4 mt-4 flex justify-center items-center">
-          <img
-            src={currentImage}
-            alt="Accordion Image"
-            className="w-[85%] h-auto rounded-[6.25rem] shadow-md"
-          />
-        </div>
+      <div className="md:block hidden">
+        <h1 className="flex text-center justify-center items-center text-6xl  mb-5">
+          AI notetaker for all professionals
+        </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-4 p-4 mx-4 ">
+          {/* Left side - Image */}
 
-        {/* Right side - Accordion */}
+          <div className="p-4 mt-4 flex justify-center items-center">
+            <img
+              src={currentImage}
+              alt="Accordion Image"
+              className="w-[85%] h-auto rounded-[6.25rem] shadow-md"
+            />
+          </div>
+
+          {/* Right side - Accordion */}
+          <div className="p-4">
+            <div className="space-y-4 lg:w-[90%] mt-3">
+              <div className="accordion">
+                {accordionData.map((item, index) => (
+                  <div key={index}>
+                    {/* Accordion Button */}
+                    <button
+                      onClick={() => handleAccordionClick(index)}
+                      className={`  w-full text-left px-4 py-3 rounded-lg flex flex-row items-center font-semibold text-lg border-b ${
+                        activeIndex === index
+                          ? "border-transparent"
+                          : "border-gray-300"
+                      }`}
+                    >
+                      {item.heading}
+                      <p
+                        className={`ml-auto ${
+                          activeIndex === index
+                            ? "text-[#ff4438] text-4xl"
+                            : "bg-[#ff4438] rounded-full text-white px-[6px]"
+                        }`}
+                      >
+                        {activeIndex === index ? "-" : "+"}
+                      </p>
+                    </button>
+
+                    {/* Accordion Content */}
+                    {activeIndex === index && (
+                      <div className="px-4 mt-2 border-b border-gray-300 ">
+                        <p className="text-5xl ">{item.subheading}</p>
+                        <p className="mt-4 text-[#282828] text-xl mb-4 ">
+                          {item.content}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <h1 className="flex text-center justify-center items-center text-5xl mb-5">
+          And more professional use cases
+        </h1>
+        <h1 className="flex text-center justify-center items-center text-5xl mb-5">
+          ......{" "}
+        </h1>
+      </div>
+      <div className="md:hidden block">
+        <h1 className="flex text-center justify-center items-center text-5xl  mb-5">
+          AI notetaker for all professionals
+        </h1>
         <div className="p-4">
           <div className="space-y-4 lg:w-[90%] mt-3">
             <div className="accordion">
@@ -82,7 +136,7 @@ export default function Accordion() {
                   {/* Accordion Button */}
                   <button
                     onClick={() => handleAccordionClick(index)}
-                    className={`w-full text-left px-4 py-3 rounded-lg flex flex-row items-center font-semibold text-lg border-b ${
+                    className={`  w-full text-left px-4 py-3 rounded-lg flex flex-row items-center font-semibold text-lg border-b ${
                       activeIndex === index
                         ? "border-transparent"
                         : "border-gray-300"
@@ -102,11 +156,20 @@ export default function Accordion() {
 
                   {/* Accordion Content */}
                   {activeIndex === index && (
-                    <div className="px-4 mt-2 border-b border-gray-300">
-                      <p className="text-5xl ">{item.subheading}</p>
-                      <p className="mt-4 text-[#282828] text-xl mb-4 ">
-                        {item.content}
-                      </p>
+                    <div className="">
+                      <div className="p-4 mt-4 flex justify-center items-center">
+                        <img
+                          src={currentImage}
+                          alt="Accordion Image"
+                          className="w-[100%] h-auto rounded-[6.25rem] shadow-md"
+                        />
+                      </div>
+                      <div className="px-4 mt-2 border-b border-gray-300 ">
+                        <p className="text-[32px] ">{item.subheading}</p>
+                        <p className="mt-4 text-[#282828] text-lg mb-4 ">
+                          {item.content}
+                        </p>
+                      </div>
                     </div>
                   )}
                 </div>
@@ -114,13 +177,13 @@ export default function Accordion() {
             </div>
           </div>
         </div>
+        <h1 className="flex text-center justify-center items-center text-2xl mb-1 mt-4 mx-4">
+          And more professional use cases
+        </h1>
+        <h1 className="flex text-center justify-center items-center text-2xl mb-5">
+          ......{" "}
+        </h1>
       </div>
-      <h1 className="flex text-center justify-center items-center text-5xl mb-5">
-        And more professional use cases
-      </h1>
-      <h1 className="flex text-center justify-center items-center text-5xl mb-5">
-        ......{" "}
-      </h1>
     </>
   );
 }

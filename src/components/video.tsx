@@ -36,20 +36,37 @@ const VideoComponent = () => {
   }, []);
 
   return (
-    <div className="my-40">
-      <video
-        ref={videoRef}
-        width="300"
-        autoPlay
-        muted
-        loop
-        playsInline
-        style={{ display: "block", margin: "0 auto" }}
-      >
-        <source src="/videos/showcase.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <>
+      <div className="md:block hidden my-28">
+        <video
+          ref={videoRef}
+          width="300"
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{ display: "block", margin: "0 auto" }}
+        >
+          <source src="/videos/showcase.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div className="md:hidden block my-28">
+        <video
+          ref={videoRef}
+          width="180"
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{ display: "block", margin: "0 auto" }}
+        >
+          <source src="/videos/showcase.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </>
   );
 };
 

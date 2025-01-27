@@ -19,24 +19,24 @@ export default function TranscriptionSection() {
 
   return (
     <>
-      <h1 className=" flex text-center justify-center items-center text-7xl my-5 mt-36 mx-96">
+      <h1 className=" flex text-center justify-center items-center md:text-6xl md:mx-72 mx-8 text-4xl ">
         Beyond just accurate transcriptions{" "}
       </h1>
 
-      <p className="flex text-center justify-center items-center my-24 text-2xl mx-64">
+      <p className="flex text-center justify-center items-center md:text-lg md:mx-60 md:my-10 text-2xl m-8 ">
         Recordings are enhanced by combining multiple advanced transcription
         features to ensure accuracy and context you can trust, supporting
         multiple speakers in 112 languages.
       </p>
-      <div className="flex flex-col mt-20 lg:grid lg:grid-cols-2 gap-6 items-center p-6">
+      <div className="md:flex flex-col mt-20 lg:grid lg:grid-cols-2 gap-6 items-center p-6 hidden ">
         {/* Left Column: Text Section */}
-        <div className="space-y-6 text-center ">
-          <ul className="space-y-4">
+        <div className="text-center ">
+          <ul className="w-[95%]">
             {Object.keys(content).map((speaker, index) => (
               <li key={index} className="">
                 <button
                   onClick={() => setActive(speaker)}
-                  className={`my-4 text-[40px] w-[60%]  ${
+                  className={`my-4 text-[40px]   ${
                     active === speaker
                       ? "text-[#ff4438] font-extrabold"
                       : "text-gray-700"
@@ -51,7 +51,7 @@ export default function TranscriptionSection() {
 
         {/* Right Column: Content Section */}
         <div className="relative flex justify-center items-center h-72 w-full">
-          <div className="absolute">
+          <div className="">
             {content[active as keyof typeof content].media.type === "image" ? (
               <img
                 src={content[active as keyof typeof content].media.src}
@@ -66,6 +66,37 @@ export default function TranscriptionSection() {
               />
             )}
           </div>
+        </div>
+      </div>
+
+      <div className="lg:hidden flex items-center justify-center">
+        <div className="text-center ">
+          <ul className="w-[95%]">
+            {Object.keys(content).map((speaker, index) => (
+              <li key={index} className="">
+                <button className={`my-4 text-[40px] text-gray-700   `}>
+                  {content[speaker as keyof typeof content].text}
+                </button>
+
+                <div className="">
+                  {content[speaker as keyof typeof content].media.type ===
+                  "image" ? (
+                    <img
+                      src={content[speaker as keyof typeof content].media.src}
+                      alt="Media Content"
+                      className="h-full w-auto  object-contain rounded-xl"
+                    />
+                  ) : (
+                    <video
+                      src={content[speaker as keyof typeof content].media.src}
+                      autoPlay
+                      className="h-full w-auto  object-contain rounded-xl"
+                    />
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </>

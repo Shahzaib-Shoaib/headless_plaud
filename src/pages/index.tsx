@@ -6,7 +6,7 @@ import VideoComponent from "@/components/video";
 
 export default function Home() {
   return (
-    <main className="font-gothic">
+    <main className="font-gothic overflow-hidden">
       <HeroSection />
       <VideoComponent />
       <Accordion />
