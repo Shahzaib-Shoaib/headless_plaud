@@ -32,10 +32,35 @@ export default function Sec3() {
   }
   return (
     <div>
-      <div className="rounded-[10rem] bg-black text-white my-14">
-        <h1 className="flex text-center items-center justify-center text-white lg:text-8xl lg:mx-52 lg:py-28">
+      <div className=" lg:rounded-[10rem] bg-black text-white my-14 ">
+        <h1 className="flex text-center items-center justify-center text-white lg:text-8xl lg:mx-52 lg:py-28 text-5xl py-24  lg:px-0 px-10">
           Nothing that matters is missed
         </h1>
+
+        {/* Mobile Div */}
+
+        <div className="block lg:hidden px-10">
+          <div className="flex items-center justify-center">
+            <img
+              src="/images/sec3.png"
+              alt=""
+              className=" object-contain w-[30%]"
+            />
+          </div>
+          <p className="text-4xl flex items-center justify-center text-center mt-10">
+            Always ready to capture everything
+          </p>
+          <p className="font-light text-[22px] leading-6 my-5 text-center">
+            The best ideas can come when you're least expecting them. NotePin is
+            always with you to ensure none of them slip away.
+          </p>
+          <p className="text-4xl flex items-center justify-center text-center mt-10">
+            Press, record, recall
+          </p>
+          <p className="font-light text-[22px] leading-6 my-5 text-center">
+            Simply press and capture every important detail, effortlessly.
+          </p>
+        </div>
 
         <div className="lg:block hidden">
           <section className="bg-black text-white min-h-screen relative px-20 py-12 md:py-20">
@@ -97,7 +122,7 @@ export default function Sec3() {
           </section>
         </div>
 
-        <h1 className="flex text-center items-center justify-center text-white lg:text-8xl lg:py-28">
+        <h1 className="flex text-center items-center justify-center text-white lg:text-8xl lg:py-28 text-5xl py-24">
           Always by your side{" "}
         </h1>
       </div>
